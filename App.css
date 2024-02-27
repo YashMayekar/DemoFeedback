@@ -1,0 +1,207 @@
+@import "./font.css";
+
+:root {
+  --background-color: #ffffff;
+  /* Light mode background color */
+  --text-color: #000000;
+  /* Light mode text color */
+  z-index: 1;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #000000;
+    /* Dark mode background color */
+    --text-color: #ffffff;
+    /* Dark mode text color */
+    z-index: 1;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Microsoft learn students club text */
+.title {
+  /* font-family: 'Product Sans', sans-serif; */
+  font-family: monospace;
+  font-size: 64px;
+  font-weight: bold;
+  padding-top: 2rem;
+  /* color: #f4f1f6f0; */
+  color: rgb(92, 1, 131);
+  background: linear-gradient(to right, rgb(84, 81, 149), rgb(153, 122, 191));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* COHERENCE 0.1 Logo */
+.logo {
+  height: fit-content;
+  padding: 1em;
+  width: fit-content;
+  will-change: filter;
+  transition: filter 300ms;
+  margin-top: 2cm;
+  position: relative;
+  z-index: 100;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Media query for logo animation */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* thank you etc, Intro  */
+.heading {
+  /* font-family: 'Product Sans', sans-serif; */
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: normal;
+  padding-top: 1cm;
+  color: rgb(92, 1, 131);
+  background: linear-gradient(to right, rgb(222, 221, 224), rgb(225, 220, 231));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Form */
+.form-frame {
+  padding: 2cm;
+  border: 1px solid #895eb3;
+  background-color: rgba(65, 12, 117, 0.347);
+  height: fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100px;
+  margin-top: 0.5cm;
+}
+
+.form-title {
+  padding: 2cm;
+  /* font-family: 'Product Sans', sans-serif; */
+  font-family: monospace;
+  font-size: 54px;
+  color: rgb(92, 1, 131);
+  background: linear-gradient(to right, rgb(90, 46, 139), rgb(137, 62, 154));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.form-content {
+  font-weight: bold;
+  font-family: monospace;
+  /* margin-top: 2cm; */
+  /* Adjust margin top as needed */
+  padding: 0.3cm;
+  /* Add padding */
+}
+
+/* questions with options */
+.ques1,
+.question,
+.ques2,
+.ques3,
+.ques4,
+.ques5,
+.ques6,
+.ques7,
+.ques8,
+.ques9 {
+  margin-top: 10px;
+  font-size: 30px;
+  color: #f7f6f8;
+  justify-content: center;
+  font-family: monospace;
+  margin-bottom: 30px;
+}
+
+.option {
+  color: #cdb5db;
+  font-family: monospace;
+}
+
+.opspacings{
+  height: 15px;
+}
+
+/* text input last question */
+.question input[type="text"] {
+  border: none;
+  border-bottom: 8px solid rgb(79, 13, 136);
+  outline: none;
+  padding-bottom: 15px;
+  font-size: 30px;
+  background-color: transparent;
+  font-family: monospace;
+}
+
+.question input[type="text"]:focus {
+  border-bottom-color: rgb(74, 3, 128);
+  font-size: 34px;
+  font-family: monospace;
+}
+
+.ques9 input[type="text"] {
+  border: none;
+  border-bottom: 8px solid rgb(79, 13, 136);
+  outline: none;
+  padding-bottom: 7px;
+  font-size: 44px;
+  background-color: transparent;
+  font-family: monospace;
+}
+
+.ques9 input[type="text"]:focus {
+  border-bottom-color: rgb(74, 3, 128);
+  font-size: 34px;
+}
+
+/* submit button */
+.submit {
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  width: 400px;
+  margin-bottom: 1cm;
+  font-family: monospace;
+  font-size: 30px;
+  color: #f7f6f8;
+  justify-content: center;
+  background-color: #895eb3;
+  margin-top: 1.2cm;
+}
+
+.footer {
+  font-family: monospace;
+}
+
+.selected {
+  background-color: #cdb5db;
+}
+
+.home-page{
+  justify-content: center;
+}
